@@ -172,3 +172,122 @@ footer p {
     padding: 20px;
   }
 }
+
+/* =======================================================
+   ETHICS / OATH SECTION
+======================================================= */
+
+.ethics-banner {
+  max-width: 1250px;
+  margin: -40px auto 70px auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 28px;
+}
+
+.ethics-card {
+  position: relative;
+
+  padding: 40px;
+  border-radius: 28px;
+
+  color: white;
+
+  overflow: hidden;
+
+  box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+
+  transition: transform 0.3s ease;
+}
+
+.ethics-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Hippocratic Oath */
+
+.ethics-card.oath {
+  background:
+    linear-gradient(
+      135deg,
+      #4285f4 0%,
+      #1a73e8 100%
+    );
+}
+
+/* Geneva Declaration */
+
+.ethics-card.geneva {
+  background:
+    linear-gradient(
+      135deg,
+      #ea4335 0%,
+      #c5221f 100%
+    );
+}
+
+.ethics-card h2 {
+  margin-top: 0;
+
+  font-size: 2rem;
+  font-weight: 800;
+
+  border-bottom: 4px solid rgba(255,255,255,0.35);
+
+  padding-bottom: 12px;
+}
+
+.ethics-card blockquote {
+  margin: 28px 0;
+
+  font-size: 1.35rem;
+  line-height: 1.9;
+
+  font-style: italic;
+
+  color: rgba(255,255,255,0.97);
+}
+
+.ethics-card p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+
+  color: rgba(255,255,255,0.9);
+}
+
+/* Decorative glow */
+
+.ethics-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  background: rgba(255,255,255,0.08);
+
+  border-radius: 50%;
+
+  top: -80px;
+  right: -80px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .ethics-card {
+    padding: 28px;
+  }
+
+  .ethics-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .ethics-card blockquote {
+    font-size: 1.1rem;
+  }
+}
